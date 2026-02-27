@@ -8,15 +8,16 @@ namespace LabWork1
 {
     public class ProductionOrder
     {
-        private int _id;                    
-        private string _orderNumber;         
-        private int _productTypeId;          
-        private int _quantity;              
-        private string _plannedStartDate;   
-        private string _plannedEndDate;     
-
+        private int _id;
+        private string _orderNumber;
+        private int _productTypeId;
+        private int _quantity;
+        private string _plannedStartDate;
+        private string _plannedEndDate;
 
         private string _status;
+
+        private List<Person> _assignedPeople = new List<Person>();
 
         public ProductionOrder(int id, string orderNumber, int productTypeId, int quantity,
                                string startDate, string endDate)
@@ -38,6 +39,9 @@ namespace LabWork1
         public string GetPlannedEndDate() => _plannedEndDate;
         public string GetStatus() => _status;
 
+        public void AssignPerson(Person p) => _assignedPeople.Add(p);
+        public IEnumerable<Person> GetAssignedPeople() => _assignedPeople;
+
         public void Start()
         {
             if (_status == "ЗАПЛАНИРОВАН")
@@ -52,5 +56,5 @@ namespace LabWork1
 
         public bool IsInProgress() => _status == "В РАБОТЕ";
     }
-
 }
+
