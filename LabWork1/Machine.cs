@@ -14,7 +14,6 @@ namespace LabWork1
         private int _workshopId;
 
         private string _status;
-
         private double _hoursWorked;
 
         public Machine(int id, string inventoryNumber, string model, int workshopId)
@@ -51,6 +50,8 @@ namespace LabWork1
             if (hours > 0)
                 _hoursWorked += hours;
         }
+
+        public void AddHours(int hours) => AddHours((double)hours);
 
         public void MarkBroken()
         {
