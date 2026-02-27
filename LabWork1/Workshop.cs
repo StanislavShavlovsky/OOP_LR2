@@ -14,6 +14,8 @@ namespace LabWork1
         private int _factoryId;
         private double _areaSqM;
 
+        private List<Machine> _machines = new List<Machine>();
+
         public Workshop(int id, string code, string name, int factoryId, double areaSqM)
         {
             _id = id;
@@ -40,6 +42,8 @@ namespace LabWork1
         {
             return _areaSqM >= threshold;
         }
-    }
 
+        public void AddMachine(Machine machine) => _machines.Add(machine);
+        public IEnumerable<Machine> GetMachines() => _machines;
+    }
 }
