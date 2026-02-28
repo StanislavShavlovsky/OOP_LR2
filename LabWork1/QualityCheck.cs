@@ -9,26 +9,25 @@ namespace LabWork1
     public class QualityCheck
     {
         private int _id;
-        private int _orderId;
-        private int _productTypeId;
+        private ProductionOrder _order;    
+        private ProductType _productType;    
         private Person _inspector;
         private string _result;
         private int _defectsCount;
 
-        public QualityCheck(int id, int orderId, int productTypeId,
+        public QualityCheck(int id, ProductionOrder order, ProductType productType,
                             Person inspector, string result, int defects)
         {
             _id = id;
-            _orderId = orderId;
-            _productTypeId = productTypeId;
+            _order = order;
+            _productType = productType;
             _inspector = inspector;
             _result = result;
             _defectsCount = defects;
         }
 
-        public int GetId() => _id;
-        public int GetOrderId() => _orderId;
-        public int GetProductTypeId() => _productTypeId;
+        public ProductionOrder GetOrder() => _order;
+        public ProductType GetProductType() => _productType;
         public Person GetInspector() => _inspector;
         public string GetResult() => _result;
         public int GetDefectsCount() => _defectsCount;
@@ -41,4 +40,5 @@ namespace LabWork1
             return (double)_defectsCount / totalChecked;
         }
     }
+
 }

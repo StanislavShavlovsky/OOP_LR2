@@ -10,25 +10,25 @@ namespace LabWork1
     {
         private int _id;
         private string _date;
-        private int _workshopId;
+        private Workshop _workshop;    
         private string _description;
         private string _severity;
 
-        public SafetyIncident(int id, string date, int workshopId, string description, string severity)
+        public SafetyIncident(int id, string date, Workshop workshop, string description, string severity)
         {
             _id = id;
             _date = date;
-            _workshopId = workshopId;
+            _workshop = workshop;
             _description = description;
             _severity = severity;
         }
 
-        public int GetId() => _id;
+        public Workshop GetWorkshop() => _workshop;
         public string GetDate() => _date;
-        public int GetWorkshopId() => _workshopId;
         public string GetDescription() => _description;
         public string GetSeverity() => _severity;
 
         public bool IsSevere() => _severity == "HIGH";
     }
+
 }

@@ -11,8 +11,20 @@ namespace LabWork1
     {
         private List<T> _items = new List<T>();
 
-        public void Add(T item) => _items.Add(item);
-        public IEnumerable<T> GetAll() => _items;
+        public void Add(T item)
+        {
+            _items.Add(item);
+        }
+
+        public IEnumerable<T> GetAll()
+        {
+            return _items;
+        }
+
+        public int Count()
+        {
+            return _items.Count;
+        }
     }
 }
 

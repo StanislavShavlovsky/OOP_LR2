@@ -58,9 +58,12 @@
   <Class Name="LabWork1.ProductionOrder">
     <Position X="17.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BEAgAAAAACACAAJBAABIAAAFCABAABAIIAAAAAIAABA=</HashCode>
+      <HashCode>BEEgAAAAACACAAJBAQBIAAAFCABAABAIAAAAAAIAABA=</HashCode>
       <FileName>ProductionOrder.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_productType" />
+    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="_assignedPeople" />
     </ShowAsCollectionAssociation>
@@ -68,18 +71,61 @@
   <Class Name="LabWork1.QualityCheck">
     <Position X="19.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAACAIAAACAABIAAAQABAAAAQAIEAAAAIAADA=</HashCode>
+      <HashCode>AAEAAQECACAIAAACAQBIAAAAABAAAAAAAEAAAAAAACA=</HashCode>
       <FileName>QualityCheck.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="_order" />
+      <Field Name="_productType" />
       <Field Name="_inspector" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LabWork1.MaintenanceTask">
     <Position X="13.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAEAAAAAAAEIABAAAEAAAAAABAAAAAACAYAAAA=</HashCode>
+      <HashCode>AAAAAAAEAQAAAAAEIABAAAEAAAAABBAAAAAACAQAAAA=</HashCode>
       <FileName>MaintenanceTask.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_machine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LabWork1.ProductType">
+    <Position X="15.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAEIABCACAAAAAAAAAAAAAAQAKoBAA=</HashCode>
+      <FileName>ProductType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LabWork1.SafetyIncident">
+    <Position X="13.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAQAAEAAAAEZABAAAAAAAAAAAAAAAAEAAAAAAE=</HashCode>
+      <FileName>SafetyIncident.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_workshop" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LabWork1.Shift">
+    <Position X="16" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgAAAAAAAAAAAIAABEAQAAAAAAAAAAAAAAAAKggEA=</HashCode>
+      <FileName>Shift.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LabWork1.StorageUnit">
+    <Position X="18" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAEAAAAAAAAABAAAAAAQQBQAAAgAAAAAKgAAA=</HashCode>
+      <FileName>StorageUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LabWork1.Repository&lt;T&gt;">
+    <Position X="22" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAQAABAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repository.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
